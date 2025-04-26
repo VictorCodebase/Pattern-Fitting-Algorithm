@@ -5,8 +5,6 @@ const fs = require("fs");
 const router = express.Router();
 
 const BASE_VISUALIZATION_PATH = path.join(__dirname, "../analytics/visualizations");
-const SERVER_BASE_URL = "https://your-server-name.onrender.com"; // Change this when deploying!
-const LOCAL_BASE_URL = "http://127.0.0.1:3000"
 
 // Helper to format DD/MM/YYYY → folder name
 function findMatchingFolder(basePath, dateStr) {
@@ -64,7 +62,7 @@ router.get("/", async (req, res) => {
 
 			filteredFiles.forEach((file) => {
 				const urlPath = `/analytics/visualizations/${folderName}/${visType}/${file}`;
-				visualizationLinks.push(`${process.env.NODE_ENV === "production" ? SERVER_BASE_URL : LOCAL_BASE_URL}${urlPath}`);
+				visualizationLinks.push(`${process.env.BASE_URL}${urlPath}`);
 			});
 		}
 

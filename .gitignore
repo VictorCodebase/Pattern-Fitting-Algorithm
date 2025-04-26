@@ -1,0 +1,74 @@
+# Node modules
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Local environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+logs/**/*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Output of npm builds
+dist/
+build/
+
+# Analytics and generated folders
+analytics/visualizations/
+
+# Ignore coverage reports
+coverage/
+
+# Ignore temporary uploads, if any
+tmp/
+temp/
+
+# Ignore database dumps
+*.sqlite
+*.sqlite3
+*.db
+*.bak
+
+# Ignore Vercel specific cache (optional but good practice)
+.vercel
+
+# Ignore backups
+*.bak
+*.backup
+*.old
+*.orig
+
+# Ignore compressed archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Ignore JSON results you may export
+*.result.json
+*.logs.json
+
+# Ignore Mac folder junk
+__MACOSX/
